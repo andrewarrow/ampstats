@@ -2,6 +2,7 @@ package youtube
 
 import (
 	"ampstats/network"
+	"ampstats/parse"
 	"fmt"
 )
 
@@ -13,6 +14,8 @@ func GetVideosByChannel(id string) []Video {
 	items := []Video{}
 	jsonString := network.VideosInChannel(id)
 	fmt.Println(jsonString)
+	result := parse.ParseJson(jsonString)
+	fmt.Println(result.Items)
 	return items
 }
 
