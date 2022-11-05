@@ -1,4 +1,4 @@
-module template
+module ampstats
 
 go 1.19
 

@@ -1,11 +1,11 @@
 package main
 
 import (
+	"ampstats/screen"
+	"ampstats/util"
 	"fmt"
 	"math/rand"
 	"os"
-	"template/screen"
-	"template/util"
 	"time"
 )
 
