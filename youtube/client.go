@@ -4,6 +4,7 @@ import (
 	"ampstats/network"
 	"ampstats/parse"
 	"fmt"
+	"html"
 )
 
 type Video struct {
@@ -18,7 +19,7 @@ func GetVideosByChannel(id string) []Video {
 	//fmt.Println(result.Items)
 	for _, item := range result.Items {
 		v := Video{}
-		v.Title = item.Snippet.Title
+		v.Title = html.UnescapeString(item.Snippet.Title)
 		items = append(items, v)
 	}
 	return items
