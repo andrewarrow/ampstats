@@ -22,6 +22,10 @@ func main() {
 	if command == "run" {
 		t := screen.NewAmpStats()
 		t.Run()
+	} else if command == "videos" {
+		for i, video := range youtube.GetVideosForChannel("AubreyMarcusPod") {
+			fmt.Printf("%02d. %s\n", i, video.Title)
+		}
 	} else if command == "args" {
 		fmt.Println("argMap", argMap)
 		arg2 := util.GetArg(2)
