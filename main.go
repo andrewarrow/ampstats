@@ -23,6 +23,8 @@ func main() {
 	if command == "run" {
 		t := screen.NewAmpStats()
 		t.Run()
+	} else if command == "search" {
+		youtube.SearchWord("AubreyMarcusPod")
 	} else if command == "videos" {
 		for i, video := range youtube.GetVideosByChannel("AubreyMarcusPod") {
 			fmt.Printf("%02d. %s\n", i, video.Title)

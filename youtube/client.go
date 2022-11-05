@@ -15,3 +15,8 @@ func GetVideosByChannel(id string) []Video {
 	fmt.Println(jsonString)
 	return items
 }
+
+func SearchWord(word string) {
+	jsonString := network.SearchWord(word)
+	fmt.Println(jsonString)
+}
