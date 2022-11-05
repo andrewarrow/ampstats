@@ -19,6 +19,7 @@ func main() {
 	}
 	command := os.Args[1]
 	argMap := util.ArgsToMap()
+	os.Mkdir("cache", 0755)
 
 	if command == "run" {
 		t := screen.NewAmpStats()
