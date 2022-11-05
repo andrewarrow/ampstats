@@ -3,6 +3,7 @@ package main
 import (
 	"ampstats/screen"
 	"ampstats/util"
+	"ampstats/youtube"
 	"fmt"
 	"math/rand"
 	"os"
@@ -23,7 +24,7 @@ func main() {
 		t := screen.NewAmpStats()
 		t.Run()
 	} else if command == "videos" {
-		for i, video := range youtube.GetVideosForChannel("AubreyMarcusPod") {
+		for i, video := range youtube.GetVideosByChannel("AubreyMarcusPod") {
 			fmt.Printf("%02d. %s\n", i, video.Title)
 		}
 	} else if command == "args" {
