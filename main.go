@@ -20,7 +20,7 @@ func main() {
 	argMap := util.ArgsToMap()
 
 	if command == "run" {
-		t := screen.NewTemplate()
+		t := screen.NewAmpStats()
 		t.Run()
 	} else if command == "args" {
 		fmt.Println("argMap", argMap)

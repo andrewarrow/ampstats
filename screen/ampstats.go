@@ -7,21 +7,21 @@ import (
 	"github.com/gizak/termui/v3/widgets"
 )
 
-type Template struct {
+type AmpStats struct {
 	source      *widgets.List
 	transfer    *widgets.List
 	destination *widgets.List
 }
 
-func NewTemplate() *Template {
-	c := Template{}
+func NewAmpStats() *AmpStats {
+	c := AmpStats{}
 	c.source = widgets.NewList()
 	c.transfer = widgets.NewList()
 	c.destination = widgets.NewList()
 	return &c
 }
 
-func (c *Template) Run() {
+func (c *AmpStats) Run() {
 	if err := ui.Init(); err != nil {
 		log.Fatalf("failed to initialize termui: %v", err)
 	}
@@ -67,5 +67,5 @@ func (c *Template) Run() {
 	}
 }
 
-func (c *Template) handleEnter() {
+func (c *AmpStats) handleEnter() {
 }
