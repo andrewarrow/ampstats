@@ -10,7 +10,7 @@ import (
 )
 
 func BaseUrl() string {
-	return "https://api.something.com"
+	return "https://youtube.googleapis.com/youtube/v3/"
 }
 
 func DoGet(route string) string {
