@@ -16,7 +16,7 @@ func FetchCaptions(id string) string {
 // TODO use oauth header
 func DownloadCaptions(id string) string {
 
-	key := os.Getenv("YOUTUBE_KEY")
-	json := DoGet(fmt.Sprintf("captions/%s?key=%s", id, key))
+	key := os.Getenv("YOUTUBE_OAUTH")
+	json := DoGetWithBearer(fmt.Sprintf("captions/%s", id), key)
 	return json
 }

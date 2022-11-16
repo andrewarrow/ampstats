@@ -13,6 +13,19 @@ func BaseUrl() string {
 	return "https://youtube.googleapis.com/youtube/v3/"
 }
 
+func DoGetWithBearer(route, key string) string {
+	agent := "agent"
+
+	urlString := fmt.Sprintf("%s%s", BaseUrl(), route)
+	request, _ := http.NewRequest("GET", urlString, nil)
+	request.Header.Set("User-Agent", agent)
+	request.Header.Set("Authorization", fmt.Sprintf("Bearer %s", key))
+	request.Header.Set("Content-Type", "application/octet-stream")
+	fmt.Println(request.Header)
+	client := &http.Client{Timeout: time.Second * 5}
+	return DoHttpRead("GET", route, client, request)
+}
+
 func DoGet(route string) string {
 	agent := "agent"
 
