@@ -8,6 +8,7 @@ import (
 )
 
 type Video struct {
+	Id    string
 	Title string
 }
 
@@ -20,6 +21,7 @@ func GetVideosByChannel(id string) []Video {
 	for _, item := range result.Items {
 		v := Video{}
 		v.Title = html.UnescapeString(item.Snippet.Title)
+		v.Id = item.Id.VideoId
 		items = append(items, v)
 	}
 	return items

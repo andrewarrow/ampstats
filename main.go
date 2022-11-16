@@ -28,7 +28,7 @@ func main() {
 		youtube.SearchWord("AubreyMarcusPod")
 	} else if command == "videos" {
 		for i, video := range youtube.GetVideosByChannel("UC604SM0YhltEKZ5hmDs_Gqw") {
-			fmt.Printf("%02d. %s\n", i, video.Title)
+			fmt.Printf("%02d. [%s] %s\n", i, video.Id, video.Title)
 		}
 	} else if command == "args" {
 		fmt.Println("argMap", argMap)
