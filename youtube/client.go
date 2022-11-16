@@ -31,3 +31,8 @@ func SearchWord(word string) {
 	jsonString := network.SearchWord(word)
 	fmt.Println(jsonString)
 }
+
+func FetchCaptions(id string) {
+	jsonString := network.FetchCaptions(id)
+	fmt.Println(jsonString)
+}

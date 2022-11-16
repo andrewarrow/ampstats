@@ -30,6 +30,9 @@ func main() {
 		for i, video := range youtube.GetVideosByChannel("UC604SM0YhltEKZ5hmDs_Gqw") {
 			fmt.Printf("%02d. [%s] %s\n", i, video.Id, video.Title)
 		}
+	} else if command == "fetch-captions" {
+		id := util.GetArg(2)
+		youtube.FetchCaptions(id)
 	} else if command == "args" {
 		fmt.Println("argMap", argMap)
 		arg2 := util.GetArg(2)
