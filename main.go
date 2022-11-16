@@ -33,6 +33,9 @@ func main() {
 	} else if command == "fetch-captions" {
 		id := util.GetArg(2)
 		youtube.FetchCaptions(id)
+	} else if command == "download-captions" {
+		id := util.GetArg(2)
+		youtube.DownloadCaptions(id)
 	} else if command == "args" {
 		fmt.Println("argMap", argMap)
 		arg2 := util.GetArg(2)

@@ -36,3 +36,8 @@ func FetchCaptions(id string) {
 	jsonString := network.FetchCaptions(id)
 	fmt.Println(jsonString)
 }
+
+func DownloadCaptions(id string) {
+	jsonString := network.DownloadCaptions(id)
+	fmt.Println(jsonString)
+}

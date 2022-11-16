@@ -12,7 +12,9 @@ func FetchCaptions(id string) string {
 	return json
 }
 
-func DownloadCaption(id string) string {
+// API keys are not supported by this API
+// TODO use oauth header
+func DownloadCaptions(id string) string {
 
 	key := os.Getenv("YOUTUBE_KEY")
 	json := DoGet(fmt.Sprintf("captions/%s?key=%s", id, key))
